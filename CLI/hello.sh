@@ -1,11 +1,17 @@
 #!/bin/bash
-
-function hi_someone() {
+function GetTime() {
 	TS=$(date "+%Y-%m-%d %H:%M:%S");
-	echo "[$TS] This is a function for print hello someone."
-	echo "[$TS] how are you?"
-	read Name;
-	echo "[$TS] hello ${Name}!"
+	echo -n "[$TS] ";
 }
 
-hi_someone
+function hi_someone() {
+	GetTime;
+	echo "This is a function for print hello someone."
+	GetTime;
+	echo "how are you?"
+	read Name;
+	GetTime;
+	echo "hello ${Name}!"
+}
+
+hi_someone;
