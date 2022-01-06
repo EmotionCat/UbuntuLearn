@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "what is your commit information?"
-read $information
+echo "what is your commit information?";
+read information;
 
 git add .
-git commit -m "'$information'"
+git commit -m"${information}"
